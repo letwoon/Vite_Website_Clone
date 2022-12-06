@@ -13,13 +13,13 @@ function HeroSection() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
   
 
   return (
     <div ref={ref} className="flex flex-col lg:flex-row-reverse lg:w-10/12 justify-end items-center pt-16 lg:pt-36 pb-12">
       <motion.div
-        style={{opacity}}
+        style={{scale}}
         className="mb-12 relative max-lg:w-full lg:mb-0 flex justify-center lg:justify-center "
       >
         <img
