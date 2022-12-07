@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { DarkModeContext } from "../../context/DarkmodeContext";
 import { motion } from "framer-motion";
 
 interface FeatureCardProps {
@@ -7,18 +6,13 @@ interface FeatureCardProps {
 }
 
 function FeatureCard({ icon }: FeatureCardProps) {
-  const { state } = useContext(DarkModeContext);
 
   return (
     <div
-      className={`${
-        state.isDarkMode ? "bg-dark_secondary" : "bg-light_secondary"
-      }  rounded-xl p-6 flex flex-col justify-between`}
+      className={`dark:bg-dark_secondary bg-light_secondary rounded-xl p-6 flex flex-col justify-between`}
     >
       <div
-        className={`${
-          state.isDarkMode ? "bg-dark_primary" : " bg-dark_secondary/10"
-        } w-12 h-12 mb-6  rounded-md flex items-center justify-center`}
+        className={`dark:bg-dark_primary bg-dark_secondary/10 w-12 h-12 mb-6  rounded-md flex items-center justify-center`}
       >
         <motion.img
           
@@ -31,16 +25,12 @@ function FeatureCard({ icon }: FeatureCardProps) {
         ></motion.img>
       </div>
       <motion.h3
-        className={`${
-          state.isDarkMode ? "text-white/90" : "text-midnight"
-        } text-white/90 font-semibold text-left`}
+        className={`dark:text-white/90 text-midnight font-semibold text-left`}
       >
         Instant Server Start
       </motion.h3>
       <p
-        className={`${
-          state.isDarkMode ? "text-white/50" : "text-midnight/70"
-        } font-semibold text-sm text-left mt-2 leading-tight`}
+        className={`dark:text-white/50 text-midnight/70 font-semibold text-sm text-left mt-2 leading-tight`}
       >
         On demand file serving over native ESM, no bundling required!
       </p>

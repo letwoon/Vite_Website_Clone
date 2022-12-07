@@ -1,19 +1,14 @@
-import { useContext } from "react";
 import SponsorCard from "./SponsorCard";
 import SponsorCardSmall from "./SponsorCardSmall";
-import { DarkModeContext } from "../../context/DarkmodeContext";
 import { motion } from "framer-motion";
 
 function SponsorSection() {
 
-  const { state } = useContext(DarkModeContext);
 
   return (
     <div className=" border-t border-transparent border-b px-6">
       <div
-        className={`h-[1px] border-t ${
-          state.isDarkMode ? "border-white/20" : " border-black/20"
-        }  w-full absolute inset-x-0`}
+        className={`h-[1px] border-t dark:border-white/20 border-black/20 w-full absolute inset-x-0`}
       ></div>
       <motion.div
         initial={{ translateY: 50, opacity: 0 }}
@@ -25,9 +20,7 @@ function SponsorSection() {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          className={`w-8 h-8 group-hover:stroke-rose-500 group-hover:animate-pulse ${
-            state.isDarkMode ? "stroke-white/50" : " stroke-black/50"
-          } `}
+          className={`w-8 h-8 group-hover:stroke-rose-500 group-hover:animate-pulse dark:stroke-white/50 stroke-black/50`}
         >
           <path
             stroke-linecap="round"
@@ -36,23 +29,17 @@ function SponsorSection() {
           />
         </svg>
         <p
-          className={`${
-            state.isDarkMode ? "text-white/60" : " text-black/60"
-          }  font-semibold text-center max-w-xs mt-2 group-hover:text-rose-500/60`}
+          className={`dark:text-white/60 text-black/60 font-semibold text-center max-w-xs mt-2 group-hover:text-rose-500/60`}
         >
           Vite is free and open source, made possible by wonderful sponsors.
         </p>
       </motion.div>
       <div className="mt-8 grid grid-cols-1 gap-1 rounded-2xl overflow-hidden">
         <div
-          className={`${
-            state.isDarkMode ? "bg-dark_secondary" : " bg-light_secondary"
-          } `}
+          className={`dark:bg-dark_secondary bg-light_secondary`}
         >
           <p
-            className={`${
-              state.isDarkMode ? "text-white/50" : " text-black/50"
-            }  font-semibold leading-tight py-3`}
+            className={`dark:text-white/50 text-black/50 font-semibold leading-tight py-3`}
           >
             Platinum Sponsors
           </p>
@@ -68,14 +55,10 @@ function SponsorSection() {
         </div>
 
         <div
-          className={`${
-            state.isDarkMode ? "bg-dark_secondary" : " bg-light_secondary"
-          } `}
+          className={`dark:bg-dark_secondary bg-light_secondary`}
         >
           <p
-            className={`${
-              state.isDarkMode ? "text-white/50" : " text-black/50"
-            } font-semibold leading-tight py-3`}
+            className={`dark:text-white/50 text-black/50 font-semibold leading-tight py-3`}
           >
             Gold Sponsors
           </p>
@@ -96,18 +79,12 @@ function SponsorSection() {
         </div>
       </div>
       <button
-        className={`mb-24 text-sm ${
-          state.isDarkMode
-            ? "text-white/50 border-white/50"
-            : " text-black/50 border-black/50"
-        }  font-semibold mt-10 border  leading-tight px-5 py-2 rounded-full hover:border-rose-500 hover:text-rose-500 transition-all duration-200`}
+        className={`mb-24 text-sm dark:text-white/50 dark:border-white/50 text-black/50 border-black/50 font-semibold mt-10 border  leading-tight px-5 py-2 rounded-full hover:border-rose-500 hover:text-rose-500 transition-all duration-200`}
       >
         Become a sponsor
       </button>
       <div
-        className={`h-[1px] border-b ${
-          state.isDarkMode ? "border-white/20" : " border-black/20"
-        } w-full absolute inset-x-0`}
+        className={`h-[1px] border-b dark:border-white/20 border-black/20 w-full absolute inset-x-0`}
       ></div>
     </div>
   );

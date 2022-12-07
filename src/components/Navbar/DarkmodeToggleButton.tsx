@@ -49,19 +49,11 @@ function DarkmodeToggleButton() {
 
   return (
     <button
-      className={`${
-        state.isDarkMode
-          ? "border-white/10 hover:border-white/60 bg-[#3A3A3A]"
-          : "border-black/30 hover:border-black/60 bg-gray-100"
-      } relative w-10 h-6 px-[1px] border  rounded-full  flex items-center transition-all duration-200 shadow-2xl` }
+      className={`dark:border-white/10 dark:hover:border-white/60 dark:bg-[#3A3A3A] border-black/30 hover:border-black/60 bg-gray-100 relative w-10 h-6 px-[1px] border  rounded-full  flex items-center transition-all duration-200 shadow-2xl` }
       onClick={toggleDarkMode}
     >
       <div
-        className={`${
-          state.isDarkMode
-            ? "bg-black translate-x-4"
-            : "bg-white/90 translate-x-0"
-        } absolute top-[1px] w-[20px] h-[20px] rounded-full flex items-center justify-center transition-all duration-200 ease-in-out`}
+        className={`dark:bg-black dark:translate-x-4 bg-white/90 translate-x-0 absolute top-[1px] w-[20px] h-[20px] rounded-full flex items-center justify-center transition-all duration-200 ease-in-out`}
       >
         {DarkLightIcon()}
       </div>

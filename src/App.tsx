@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import { DarkModeContext } from './context/DarkmodeContext'
 
 function App() {
-  const { state } = useContext(DarkModeContext);
+  const { state, dispatch } = useContext(DarkModeContext);
   // Set background color for whole body
   useEffect(() => {
     if (state.isDarkMode) {
@@ -19,6 +19,15 @@ function App() {
       document.body.style.background = "#ffffff";
     }
   }, [state.isDarkMode]);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      dispatch({ type: "DARKMODE_TRUE" });
+    } else {
+      dispatch({ type: "DARKMODE_FALSE" });
+    }
+  }, [])
+  
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -34,7 +43,7 @@ function App() {
   // Disable scrolling in the background when the mobile menu is open,
   // when a menu is open, set position: fixed on the body, and remove on close.
   return (
-    <div className={`w-full ${isOpen && "fixed"}`}>
+    <div className={`w-full ${isOpen && "fixed"} ${state.isDarkMode? 'dark': ""}`}>
       <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="px-6 lg:px-16 flex flex-col justify-center">
         <HeroSection />

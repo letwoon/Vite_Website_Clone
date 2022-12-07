@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { DarkModeContext } from "../../context/DarkmodeContext";
+import { useContext } from "react";
 
 interface NavlinkProps {
   isExtend: boolean;
@@ -8,17 +7,13 @@ interface NavlinkProps {
 
 function NavlinkSub({isExtend, setIsExtend} : NavlinkProps) {
 
-  const { state } = useContext(DarkModeContext);
-
     function toggleExtend() {
         setIsExtend(prev => !prev)
     }
 
   return (
     <li
-      className={`py-3 border-b ${
-        state.isDarkMode ? "border-white/10" : " border-black/10"
-      } `}
+      className={`py-3 border-b dark:border-white/10 border-black/10`}
     >
       <div
         className="flex justify-between items-center group cursor-pointer"
@@ -36,7 +31,7 @@ function NavlinkSub({isExtend, setIsExtend} : NavlinkProps) {
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          className={`w-5 h-5 ${state.isDarkMode ? "stroke-white/70" : "stroke-black/50"}  ${
+          className={`w-5 h-5 dark:stroke-white/70 stroke-black/50 ${
             isExtend ? "rotate-45" : "rotate-0"
           } transition-all duration-200`}
         >
