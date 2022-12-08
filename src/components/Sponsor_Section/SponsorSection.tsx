@@ -35,9 +35,7 @@ function SponsorSection() {
         </p>
       </motion.div>
       <div className="mt-8 grid grid-cols-1 gap-1 rounded-2xl overflow-hidden">
-        <div
-          className={`dark:bg-dark_secondary bg-light_secondary`}
-        >
+        <div className={`dark:bg-dark_secondary bg-light_secondary`}>
           <p
             className={`dark:text-white/50 text-black/50 font-semibold leading-tight py-3`}
           >
@@ -54,9 +52,7 @@ function SponsorSection() {
           </div>
         </div>
 
-        <div
-          className={`dark:bg-dark_secondary bg-light_secondary`}
-        >
+        <div className={`dark:bg-dark_secondary bg-light_secondary`}>
           <p
             className={`dark:text-white/50 text-black/50 font-semibold leading-tight py-3`}
           >
@@ -79,7 +75,7 @@ function SponsorSection() {
         </div>
       </div>
       <button
-        className={`mb-24 text-sm dark:text-white/50 dark:border-white/50 text-black/50 border-black/50 font-semibold mt-10 border  leading-tight px-5 py-2 rounded-full hover:border-rose-500 hover:text-rose-500 transition-all duration-200`}
+        className={`mb-24 text-sm dark:text-white/50 dark:border-white/50 text-black/50 border-black/50 font-semibold mt-10 border  leading-tight px-5 py-2 rounded-full transition-all duration-200 hover:text-rose-500 dark:hover:text-rose-500 hover:border-rose-500 dark:hover:border-rose-500`}
       >
         Become a sponsor
       </button>
