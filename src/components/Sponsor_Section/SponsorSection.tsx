@@ -31,7 +31,7 @@ function SponsorSection() {
         <p
           className={`dark:text-white/60 text-black/60 font-semibold text-center max-w-xs mt-2 group-hover:text-rose-500/60`}
         >
-          Vite is free and open source, made possible by wonderful sponsors.
+          This is a frontend practice, made possible by wonderful sponsors.
         </p>
       </motion.div>
       <div className="mt-8 grid grid-cols-1 gap-1 rounded-2xl overflow-hidden">

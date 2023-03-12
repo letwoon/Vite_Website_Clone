@@ -1,6 +1,3 @@
-import { useContext } from "react";
-
-
 interface HamburgerProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;

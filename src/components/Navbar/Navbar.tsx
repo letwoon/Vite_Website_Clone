@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import logo from "../../assets/icon/logo.svg";
 import DarkmodeToggleButton from "./DarkmodeToggleButton";
 import Hamburger from "./Hamburger";
@@ -27,7 +27,7 @@ function Navbar({isOpen, setIsOpen} : NavbarProps) {
             <p
               className={`font-bold text-xl dark:text-white/90 text-midnight`}
             >
-              Vite
+              Vitee
             </p>
           </div>
 
@@ -50,6 +50,7 @@ function Navbar({isOpen, setIsOpen} : NavbarProps) {
                 Plugins
               </a>
             </div>
+            
             <div className="flex items-center relative">
               <p className="nav_item peer ">
                 Resources
@@ -94,11 +95,14 @@ function Navbar({isOpen, setIsOpen} : NavbarProps) {
                 </a>
               </div>
             </div>
+
+
             <div className="flex items-center">
               <a className="nav_item" href="">
                 Version
               </a>
             </div>
+
             <div className="py-6 pl-4 flex items-center">
               <DarkmodeToggleButton />
             </div>

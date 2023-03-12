@@ -20,6 +20,7 @@ function App() {
     }
   }, [state.isDarkMode]);
 
+  // follow the system darkmode setting
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       dispatch({ type: "DARKMODE_TRUE" });

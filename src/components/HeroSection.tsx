@@ -6,7 +6,7 @@ function HeroSection() {
 
   // Use Framer Motion package to implement animation:
   // when scrolling down, the logo opacity go to 0, go up will go to normal
-  let ref = useRef(null);
+  let ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
